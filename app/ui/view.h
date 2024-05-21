@@ -39,7 +39,7 @@
 #pragma message("PRODUCTION_BUILD is " STR(PRODUCTION_BUILD))
 // By default our builds are not production ready
 // Unless we specificaly define PRODUCTION_BUILD to 1
-#if defined(PRODUCTION_BUILD) && (PRODUCTION_BUILD == 0)
+#if defined(PRODUCTION_BUILD) && PRODUCTION_BUILD
 #undef MENU_MAIN_APP_LINE1
 #undef MENU_MAIN_APP_LINE2
 

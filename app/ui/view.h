@@ -29,10 +29,14 @@
 #endif
 #endif
 
+#define STR_HELPER(x) #x
+#define STR(x) STR_HELPER(x)
+
 #ifndef PRODUCTION_BUILD
 #define PRODUCTION_BUILD 0
 #endif
 
+#pragma message("PRODUCTION_BUILD is " STR(PRODUCTION_BUILD))
 // By default our builds are not production ready
 // Unless we specificaly define PRODUCTION_BUILD to 1
 #if defined(PRODUCTION_BUILD) && (PRODUCTION_BUILD == 0)

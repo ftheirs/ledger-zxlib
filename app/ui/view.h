@@ -35,7 +35,7 @@
 
 // By default our builds are not production ready
 // Unless we specificaly define PRODUCTION_BUILD to 1
-#if (PRODUCTION_BUILD == 0)
+#if defined(PRODUCTION_BUILD) && (PRODUCTION_BUILD == 0)
 #undef MENU_MAIN_APP_LINE1
 #undef MENU_MAIN_APP_LINE2
 
